@@ -1,0 +1,224 @@
+body {
+  min-width: 320px;
+  background: #f3f5f2;
+  color: #25332c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  color: #25332c;
+  text-align: left;
+}
+
+.site-header {
+  padding: 30px 24px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.site-eyebrow,
+.panel-eyebrow {
+  margin: 0;
+  color: #51846a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-title {
+  margin: 8px 0 22px;
+  color: #25332c;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.15;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-top: 1px solid #e5e9e5;
+  padding: 14px 0;
+}
+
+.site-nav a {
+  border-radius: 6px;
+  padding: 8px 14px;
+  color: #385b47;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: #edf4ef;
+  outline: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+  align-items: start;
+  gap: 24px;
+  width: min(860px, calc(100% - 40px));
+  margin: 48px auto;
+}
+
+.login-panel,
+.books-panel {
+  box-sizing: border-box;
+  border: 1px solid #e4e9e5;
+  border-radius: 14px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgb(36 57 44 / 8%);
+}
+
+.admin-login-panel {
+  grid-column: 1 / -1;
+}
+
+.registration-panel {
+  grid-column: 1 / -1;
+}
+
+.admin-login-form {
+  max-width: 460px;
+}
+
+.login-panel h2,
+.books-panel h2 {
+  margin: 8px 0;
+  color: #25332c;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.panel-description {
+  margin: 0 0 24px;
+  color: #68746d;
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin: 0 0 7px;
+  color: #34463b;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 18px;
+  border: 1px solid #cbd5ce;
+  border-radius: 7px;
+  padding: 12px 13px;
+  background: #fff;
+  color: #25332c;
+  font: inherit;
+}
+
+.login-form input:focus {
+  border-color: #51846a;
+  outline: 3px solid rgb(81 132 106 / 18%);
+}
+
+.login-form button {
+  width: 100%;
+  border: 0;
+  border-radius: 7px;
+  padding: 13px 16px;
+  background: #3d7656;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 150ms ease;
+}
+
+.login-form button:hover {
+  background: #315f44;
+}
+
+.login-form button:focus-visible {
+  outline: 3px solid #89b99b;
+  outline-offset: 3px;
+}
+
+.login-message {
+  min-height: 1.4em;
+  margin: 14px 0 0;
+  color: #8a4b18;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.books-panel > div {
+  text-align: center;
+}
+
+.books-panel .imgcls {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.books-panel h2:not(#books-title) {
+  margin: 14px 0;
+  font-size: 1.15rem;
+}
+
+.books-panel button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #edf4ef;
+  color: #315f44;
+  cursor: pointer;
+  font: inherit;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 22px;
+  background: #25332c;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    padding: 24px 16px 0;
+  }
+
+  .site-nav {
+    gap: 2px;
+  }
+
+  .site-nav a {
+    padding: 8px 10px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: min(460px, calc(100% - 32px));
+    margin: 28px auto;
+  }
+
+  .login-panel,
+  .books-panel {
+    padding: 24px;
+  }
+}
